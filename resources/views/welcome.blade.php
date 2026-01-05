@@ -97,9 +97,9 @@
     </div>
 
     <!-- Floating Link -->
-    <div class="link-area">
+    <!-- <div class="link-area">
         <a href="https://www.youtube.com/channel/UCki4IDK86E6_pDtptmsslow" target="_blank">Click for More</a>
-    </div>
+    </div> -->
 
     <!-- Footer -->
     <footer class="footer bg-dark text-light text-center">
