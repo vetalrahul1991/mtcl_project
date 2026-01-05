@@ -240,7 +240,7 @@
                     </div>
                 </div>
 
-                <div class="row">
+                <div class="row mb-5">
                     <div class="col-4">
                         <button type="submit" class="btn btn-primary btn-block">Register</button>
                     </div>
@@ -267,19 +267,30 @@
 <style>
     .register-box {
         width: 900px !important;
-        max-width: 100%; /* keeps it responsive on smaller screens */
-        margin: 0 auto;  /* centers the box horizontally */
+        max-width: 100%;
+        margin: 0 auto;
+        margin-bottom: 120px; /* increased space for footer */
     }
 
-     /* Sticky full-width footer */
+    /* Sticky full-width footer for desktop */
+    .footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 15px 0;
+        background-color: #000;
+        z-index: 999;
+    }
+
+    /* On small screens, make footer static to avoid overlap */
+    @media (max-width: 991px) {
         .footer {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            padding: 15px 0;
-            background-color: #000;
-            z-index: 999;
+            position: static;
         }
+        .register-box {
+            margin-bottom: 30px; /* less margin needed */
+        }
+    }
 </style>
 </x-guest-layout>
