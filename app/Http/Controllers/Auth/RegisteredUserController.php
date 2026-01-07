@@ -39,14 +39,14 @@ class RegisteredUserController extends Controller
             'date_of_birth' => 'required|date',
             'district' => 'required|string|max:255',
             'city' => 'required|string|max:255',
-            'zone' => 'required|string|max:255',
+           // 'zone' => 'required|string|max:255',
             'playing_role' => 'required|string|max:255',
             'batting_handedness' => 'required|string|max:255',
             'preferred_bowling_style' => 'required|string|max:255',
             'preferred_batting_order' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|confirmed|min:8',
-           // 'payment_screenshot' => 'required|image|mimes:jpeg,png,jpg,gif|max:1048',
+            'payment_screenshot' => 'required|image|mimes:jpeg,png,jpg,gif|max:1048',
         ]);
 
         // Handle file upload
@@ -66,7 +66,7 @@ class RegisteredUserController extends Controller
             'date_of_birth' => $validated['date_of_birth'],
             'district' => $validated['district'],
             'city' => $validated['city'],
-            'zone' => $validated['zone'],
+           // 'zone' => $validated['zone'],
             'playing_role' => $validated['playing_role'],
             'batting_handedness' => $validated['batting_handedness'],
             'preferred_bowling_style' => $validated['preferred_bowling_style'],
@@ -86,6 +86,8 @@ class RegisteredUserController extends Controller
 
         Auth::login($user);
 
-        return redirect(RouteServiceProvider::HOME);
+        // Redirect to dashboard with message
+        return redirect(RouteServiceProvider::HOME)
+            ->with('success', 'Thank you for registering with us. Your registration was successful.');
     }
 }

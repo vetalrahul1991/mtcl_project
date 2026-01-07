@@ -16,8 +16,8 @@ class AddRegistrationFieldsToUsersTable extends Migration
             $table->date('date_of_birth')->nullable()->after('mobile_number');
             $table->string('district')->nullable()->after('date_of_birth');
             $table->string('city')->nullable()->after('district');
-            $table->string('zone')->nullable()->after('city');
-            $table->string('playing_role')->nullable()->after('zone');
+           // $table->string('zone')->nullable()->after('city');
+            $table->string('playing_role')->nullable()->after('city');
             $table->string('batting_handedness')->nullable()->after('playing_role');
             $table->string('preferred_bowling_style')->nullable()->after('batting_handedness');
             $table->string('preferred_batting_order')->nullable()->after('preferred_bowling_style');

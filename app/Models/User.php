@@ -25,7 +25,6 @@ class User extends Authenticatable
         'date_of_birth',
         'district',
         'city',
-        'zone',
         'playing_role',
         'batting_handedness',
         'preferred_bowling_style',

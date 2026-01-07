@@ -42,7 +42,18 @@
         <div class="card-body">
             <p class="login-box-msg">Registration</p>
 
-            <form action="{{ route('register') }}" method="POST">
+            {{-- Show validation errors --}}
+            @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul class="mb-0">
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
+
+            <form action="{{ route('register') }}" method="POST" enctype="multipart/form-data">
                 @csrf
 
                 <div class="row">
@@ -99,7 +110,7 @@
                 <x-input-error :messages="$errors->get('email')" class="text-danger" />
 
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-md-6">
                         <select id="district" name="district" class="form-control mb-3" required>
                             <option value="">Select District</option>
                             <option value="Ahmednagar">Ahmednagar</option>
@@ -142,13 +153,9 @@
                         <x-input-error :messages="$errors->get('district')" class="text-danger" />
 
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-6">
                         <input id="city" class="form-control mb-3" type="text" name="city"
                             value="{{ old('city') }}" required placeholder="City">
-                    </div>
-                    <div class="col-md-4">
-                        <input id="zone" class="form-control mb-3" type="text" name="zone"
-                            value="{{ old('zone') }}" required placeholder="Zone">
                     </div>
                 </div>
 
@@ -222,12 +229,13 @@
                             <strong>UPI ID:</strong> dingdongmaster967@oksbi
                         </div>
                         <div class="mt-3 text-danger font-weight-bold">
-            <span>Note: If you have not made payment on this, please upload the screenshot below.</span>
-        </div>
+                            <span>Note: If you have not made payment on this, please upload the screenshot below.</span>
+                        </div>
                     </div>
 
                     <!-- File upload for screenshot -->
                     <div class="col-md-6">
+                        <!-- payment_screenshot input field starts here -->
                         <label for="payment_screenshot" class="form-label">Upload Payment Screenshot *</label>
                         <div class="input-group mb-3">
                             <input id="payment_screenshot" class="form-control" type="file" name="payment_screenshot"
@@ -237,6 +245,7 @@
                             </div>
                         </div>
                         <x-input-error :messages="$errors->get('payment_screenshot')" class="text-danger" />
+                        <!-- payment_screenshot input field ends here -->
                     </div>
                 </div>
 
