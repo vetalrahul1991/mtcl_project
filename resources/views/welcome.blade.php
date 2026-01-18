@@ -76,25 +76,116 @@
     </div>
 
     <!-- Content Sections -->
-    <div id="about" class="container p-0 m-0">
-        <h2>About Us</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
-    </div>
+    <div id="about" class="container p-4 bg-dark text-light">
+    <h2>About Us</h2>
+    <p>
+        Welcome to <strong>MTCL — Mumbai Talent Cricket League</strong>, a community‑driven initiative 
+        dedicated to nurturing cricketing talent across Mumbai. Our mission is to provide aspiring players 
+        with the exposure, training, and opportunities they need to shine while celebrating the city’s 
+        unmatched passion for cricket.
+    </p>
+    <p>
+        Founded in 2025, MTCL has quickly become a hub for grassroots cricket development. We organize 
+        tournaments at iconic venues such as <strong>Azad Maidan</strong> and <strong>Wankhede Stadium</strong>, 
+        giving young cricketers the chance to showcase their skills on legendary grounds. With strong 
+        support from schools, colleges, and local communities, we are building a sustainable ecosystem 
+        for cricket in Mumbai.
+    </p>
+    <p>
+        Beyond the game, MTCL emphasizes discipline, teamwork, and sportsmanship — values that define 
+        both cricket and life. Our vision is to inspire the next generation of players while bringing 
+        fans, sponsors, and communities together through the spirit of the sport.
+    </p>
+    <p>
+        Whether you are a player looking to register, a sponsor seeking opportunities, or a fan eager 
+        to follow the action, MTCL welcomes you to be part of this exciting journey. Together, we are 
+        shaping the future of cricket in Mumbai.
+    </p>
+</div>
 
-    <div id="portfolio" class="container p-0 m-0 bg-light">
-        <h2>Portfolio</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
-    </div>
 
-    <div id="services" class="container p-0 m-0">
-        <h2>Services</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
-    </div>
+   <div id="portfolio" class="container p-4 bg-dark text-light">
+    <h2>Portfolio</h2>
+    <p>
+        MTCL Mumbai has proudly organized and participated in a variety of cricketing events, 
+        showcasing the city’s vibrant sporting culture and nurturing young talent. 
+        Here are some highlights from our journey:
+    </p>
+    <ul>
+        <li>🏏 <strong>Mumbai Monsoon Cup</strong> — Annual tournament held at Azad Maidan with 20+ local teams competing.</li>
+        <li>🎯 <strong>School Cricket Championship</strong> — Talent hunt across Mumbai schools, discovering future stars and giving them exposure.</li>
+        <li>🏟️ <strong>Wankhede Exhibition Matches</strong> — Friendly matches hosted at the iconic Wankhede Stadium to inspire young cricketers.</li>
+        <li>📸 <strong>Media Coverage</strong> — Featured in Mumbai Mirror, Mid‑Day, and local sports channels for our grassroots initiatives.</li>
+        <li>🤝 <strong>Community Engagement</strong> — Cricket coaching camps in suburban areas like Borivali, Thane, and Navi Mumbai.</li>
+        <li>🌐 <strong>Digital Presence</strong> — Live score updates, match highlights, and player stats shared through our official website and social media.</li>
+    </ul>
+    <p>
+        Each of these milestones reflects our commitment to building a sustainable cricket ecosystem in Mumbai, 
+        where players, fans, and sponsors come together to celebrate the sport.
+    </p>
+</div>
 
-    <div id="contact" class="container p-0 m-0 bg-light">
-        <h2>Contact</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
-    </div>
+
+  <div id="services" class="container p-4 bg-dark text-light">
+    <h2>Services</h2>
+    <p>
+        MTCL Mumbai offers a wide range of cricket‑related services designed to support players, 
+        teams, sponsors, and fans. Our goal is to create a professional yet community‑driven 
+        ecosystem for cricket in Mumbai.
+    </p>
+    <ul>
+        <li>⚡ <strong>Player Registration & Management</strong> — Seamless online registration system for players, with profile management and performance tracking.</li>
+        <li>🏟️ <strong>Tournament Organization</strong> — Planning and hosting local leagues, knockout tournaments, and exhibition matches at venues like Azad Maidan and Wankhede Stadium.</li>
+        <li>📊 <strong>Match Statistics & Analytics</strong> — Real‑time score updates, player stats, and team performance reports available online.</li>
+        <li>🎥 <strong>Live Streaming & Highlights</strong> — Broadcasting matches with professional coverage, plus highlight reels for fans and sponsors.</li>
+        <li>🎯 <strong>Talent Hunt Programs</strong> — Scouting and nurturing young cricketers from schools and colleges across Mumbai.</li>
+        <li>🤝 <strong>Sponsorship & Branding Opportunities</strong> — Connecting local businesses and brands with cricket events for promotion and community engagement.</li>
+        <li>📚 <strong>Coaching & Training Camps</strong> — Organizing skill‑development workshops with experienced coaches to guide aspiring players.</li>
+        <li>🌐 <strong>Digital Engagement</strong> — Maintaining an active online presence with match updates, social media campaigns, and fan interaction.</li>
+    </ul>
+    <p>
+        Through these services, MTCL Mumbai ensures that cricket is not just a sport but a 
+        celebration of community, talent, and opportunity.
+    </p>
+</div>
+
+   <div id="contact" class="container p-4 bg-dark text-light">
+    <h2>Contact Us</h2>
+    <p>
+        We’d love to hear from you! Whether you’re a player, sponsor, or fan, 
+        MTCL Mumbai is always open to connect.
+    </p>
+
+    <!-- Contact Details -->
+    <ul class="list-unstyled">
+        <li>📍 <strong>Address:</strong> MTCL Office, Wankhede Stadium Complex, Mumbai, Maharashtra</li>
+        <li>📞 <strong>Phone:</strong> +91 98765 43210</li>
+        <li>📧 <strong>Email:</strong> info@mtclmumbai.com</li>
+        <li>🌐 <strong>Website:</strong> www.mtclmumbai.com</li>
+        <li>📱 <strong>Social Media:</strong> 
+            <a href="#" class="text-warning">Facebook</a> | 
+            <a href="#" class="text-warning">Instagram</a> | 
+            <a href="#" class="text-warning">Twitter</a>
+        </li>
+    </ul>
+
+    <!-- Contact Form -->
+    <form class="mt-4">
+        <div class="form-group">
+            <label for="name">Your Name:</label>
+            <input type="text" class="form-control" id="name" placeholder="Enter your name">
+        </div>
+        <div class="form-group">
+            <label for="email">Your Email:</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter your email">
+        </div>
+        <div class="form-group">
+            <label for="message">Message:</label>
+            <textarea class="form-control" id="message" rows="4" placeholder="Write your message"></textarea>
+        </div>
+        <button type="submit" class="btn btn-warning">Send Message</button>
+    </form>
+</div>
 
     <!-- Floating Link -->
     <!-- <div class="link-area">
@@ -189,5 +280,31 @@
             background-color: #000;
             z-index: 999;
         }
+
+
+        .banner {
+    position: relative;
+    height: 100vh; /* full screen height */
+    overflow: hidden;
+}
+.banner img {
+    object-fit: cover;
+    height: 100%;
+}
+.banner-caption {
+    position: absolute;
+    bottom: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.banner-caption h5 {
+    font-size: 45px;
+    color: #ffcc00;
+    text-transform: uppercase;
+}
+.banner-caption p {
+    font-size: 18px;
+    color: #f8f9fa;
+}
     </style>
 </x-guest-layout>
