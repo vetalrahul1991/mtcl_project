@@ -49,7 +49,7 @@ class RegisteredUserController extends Controller
             'password' => 'required|string|confirmed|min:8',
            'payment_screenshot' => 'required|image|mimes:jpeg,png,jpg,gif|max:1048',
         ]);
-echo '<pre>'; print_r($validated); echo '</pre>'; exit;
+//ho '<pre>'; print_r($validated); echo '</pre>'; exit;
         // Handle file upload
         if ($request->hasFile('payment_screenshot')) {
             $path = $request->file('payment_screenshot')->store('payment_screenshots', 'public');
@@ -78,10 +78,10 @@ echo '<pre>'; print_r($validated); echo '</pre>'; exit;
         ])->assignRole('user');
 
         // Send registration confirmation email
-        Mail::raw('Thank you for registering with us. Your registration was successful.', function ($message) use ($user) {
-            $message->to($user->email)
-                    ->subject('Registration Successful');
-        });
+        // Mail::raw('Thank you for registering with us. Your registration was successful.', function ($message) use ($user) {
+        //     $message->to($user->email)
+        //             ->subject('Registration Successful');
+        // });
 
         event(new Registered($user));
 

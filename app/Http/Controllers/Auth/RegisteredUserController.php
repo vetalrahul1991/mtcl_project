@@ -77,10 +77,10 @@ class RegisteredUserController extends Controller
         ])->assignRole('user');
 
         // Send registration confirmation email
-        Mail::raw('Thank you for registering with us. Your registration was successful.', function ($message) use ($user) {
-            $message->to($user->email)
-                    ->subject('Registration Successful');
-        });
+        // Mail::raw('Thank you for registering with us. Your registration was successful.', function ($message) use ($user) {
+        //     $message->to($user->email)
+        //             ->subject('Registration Successful');
+        // });
 
         event(new Registered($user));
 
