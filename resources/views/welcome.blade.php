@@ -48,22 +48,22 @@
             <div class="carousel-item active">
                 <img class="d-block w-100 h-100" src="https://my.ispl-t10.com/images/banner-img/ILV9V8tTAqqTVj5zQoZrni128rGdmp30Bhd9vsHi.jpg" alt="First slide">
                 <div class="carousel-caption d-none d-md-block">
-                    <h5>Slider One Item</h5>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <h5></h5>
+                    <p></p>
                 </div>
             </div>
             <div class="carousel-item">
                 <img class="d-block w-100 h-100" src="https://my.ispl-t10.com/images/banner-img/mj3gw0TxpFmv45r5HhM3qaTPKf0gStpzC4SuFZ9p.jpg" alt="Second slide">
                 <div class="carousel-caption d-none d-md-block">
-                    <h5>Slider Two Item</h5>
-                    <p>Deserunt excepturi quas vero.</p>
+                    <h5></h5>
+                    <p></p>
                 </div>
             </div>
             <div class="carousel-item">
                 <img class="d-block w-100 h-100" src="https://my.ispl-t10.com/images/banner-img/RP7gdj5l4YxEAaWVFCZQyX7pDuzYJ19aqmcHENqv.jpg" alt="Third slide">
                 <div class="carousel-caption d-none d-md-block">
-                    <h5>Slider Three Item</h5>
-                    <p>Maxime, nulla, tempore.</p>
+                    <h5></h5>
+                    <p></p>
                 </div>
             </div>
         </div>

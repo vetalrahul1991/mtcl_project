@@ -4,7 +4,7 @@
             <div class="small-box bg-info">
                 <div class="inner">
                     <h3>{{ $user }}</h3>
-                    <p>Total Users</p>
+                    <p>Total Players Registered</p>
                 </div>
                 <div class="icon">
                     <i class="fa fa-users"></i>
