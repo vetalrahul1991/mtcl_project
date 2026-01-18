@@ -22,7 +22,9 @@ class AddRegistrationFieldsToUsersTable extends Migration
             $table->string('preferred_bowling_style')->nullable()->after('batting_handedness');
             $table->string('preferred_batting_order')->nullable()->after('preferred_bowling_style');
             $table->string('payment_screenshot')->nullable()->after('preferred_batting_order');
-        });
+            $table->tinyInteger('status')->default(1)->after('payment_screenshot');
+
+            });
     }
 
     public function down()

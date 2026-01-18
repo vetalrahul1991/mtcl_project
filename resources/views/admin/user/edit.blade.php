@@ -36,7 +36,7 @@
                     <div class="col-lg-6">
                         <div class="form-group">
                             <label for="role" class="form-label">Role:*</label>
-                            <select name="role" id="role" class="form-control" required>
+                            <select name="role" id="role" class="form-control" required >
                                 <option value="" selected disabled>selecte the role</option>
                                 @foreach ($roles as $role)
                                     <option value="{{ $role->name }}"
@@ -46,6 +46,21 @@
                             <x-error>role</x-error>
                         </div>
                     </div>
+
+                    <div class="col-lg-6">
+                    <div class="form-group">
+                        
+                        <label for="status" class="form-label">Status:</label>
+                        <select name="status" id="status" class="form-control">
+                            <option value="1" {{ $user->status == 1 ? 'selected' : '' }}>Verification Pending</option>
+                            <option value="2" {{ $user->status == 2 ? 'selected' : '' }}>Approved</option>
+                            <option value="3" {{ $user->status == 3 ? 'selected' : '' }}>Rejected</option>
+                            <option value="4" {{ $user->status == 4 ? 'selected' : '' }}>Selected</option>
+                        </select>
+                        <x-error>status</x-error>
+                    </div>
+                </div>
+
                     <div class="col-lg-12">
                         <div class="float-right">
                             <button class="btn btn-primary" type="submit">Save</button>

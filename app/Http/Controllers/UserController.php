@@ -20,7 +20,14 @@ class UserController extends Controller
     }
     public function index()
     {
-        $data = User::orderBy('id','DESC')->get();
+       $user = auth()->user(); // get the logged-in user
+       if ($user->hasRole('admin')) { // If user is admin, show all records
+         $data = User::orderBy('id', 'DESC')->get();
+         } else { 
+            // Otherwise, show only the logged-in user's record
+             $data = User::where('id', $user->id)->get(); 
+            }
+       
         return view('admin.user.index', compact('data'));
     }
     public function create()
@@ -51,6 +58,7 @@ class UserController extends Controller
     }
     public function update(Request $request, User $user)
     {
+       
         $request->validate([
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', Rule::unique('users')->ignore($user->id)],
@@ -59,8 +67,9 @@ class UserController extends Controller
         $user = User::find($request->id);
         $user->name = $request->name;
         $user->email = $request->email;
+        $user->status = $request->status;
         $user->save();
-        $user->assignRole($request->role);
+       // $user->assignRole($request->role);
         return redirect()->route('admin.user.index')->with('success','User updated successfully.');
     }
     public function destroy($id)

@@ -103,12 +103,12 @@
     </div>
     <!-- ./wrapper -->
     <footer class="main-footer">
-        <strong>Copyright © 2023-{{ date('Y') }} <a href="nihirz.netlify.app">Zala
-                Nihir</a>.</strong> All rights reserved.
+        <strong>Copyright © 2023-{{ date('Y') }} <a href="https://maharashtratenniscricketleague.com/">MTCL
+                </a>.</strong> All rights reserved.
     </footer>
     <!-- ./wrapper -->
 
-    <!-- jQuery -->
+<!-- jQuery -->
     <script src="{{ asset('admin/plugins/jquery/jquery.min.js') }}"></script>
     <!-- jQuery UI 1.11.4 -->
     <script src="{{ asset('admin/plugins/jquery-ui/jquery-ui.min.js') }}"></script>

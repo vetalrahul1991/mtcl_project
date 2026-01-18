@@ -21,6 +21,7 @@ class User extends Authenticatable
         'first_name',
         'middle_name',
         'surname',
+        'status',
         'mobile_number',
         'date_of_birth',
         'district',
@@ -55,4 +56,16 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    public function getStatusLabelAttribute()
+    {
+        return match($this->status) {
+            1 => 'Verification Pending',
+            2 => 'Approved',
+            3 => 'Rejected',
+            4 => 'Selected',
+            default => 'Unknown',
+        };
+    }
+
 }

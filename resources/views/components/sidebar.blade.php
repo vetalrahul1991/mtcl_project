@@ -11,7 +11,7 @@
                 <a href="{{ route('admin.user.index') }}"
                     class="nav-link {{ Route::is('admin.user.index') ? 'active' : '' }}">
                     <i class="nav-icon fas fa-user"></i>
-                    <p>Users
+                    <p>Players List
                         <span class="badge badge-info right">{{ $userCount }}</span>
                     </p>
                 </a>
@@ -78,6 +78,19 @@
                 <p>Profile</p>
             </a>
         </li> -->
+
+         @role('user')
+            <li class="nav-item">
+                <a href="{{ route('admin.user.index') }}"
+                    class="nav-link {{ Route::is('admin.user.index') ? 'active' : '' }}">
+                    <i class="nav-icon fas fa-user"></i>
+                    <p>My Details
+                        <!-- <span class="badge badge-info right">{{ $userCount }}</span> -->
+                    </p>
+                </a>
+            </li>
+            
+        @endrole
 
     </ul>
 </nav>
