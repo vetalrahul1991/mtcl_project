@@ -5,8 +5,8 @@
       <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
             <!-- Logo at very start -->
-            <img src="https://my.ispl-t10.com/assets/img/image-master/1760592722.png" 
-                 alt="ISPL" class="img-fluid" width="70">
+            <img src="{{ asset('images/logo.jpeg') }}" 
+                 alt="MTCL" class="img-fluid" width="70">
 
             <!-- Brand name next to logo -->
             <a class="navbar-brand ml-2" href="#">MTCL</a>

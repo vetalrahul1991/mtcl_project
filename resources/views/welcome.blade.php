@@ -8,8 +8,8 @@
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
             <!-- Logo at very start -->
-            <img src="https://my.ispl-t10.com/assets/img/image-master/1760592722.png" 
-                 alt="ISPL" class="img-fluid" width="70">
+            <img src="{{ asset('images/logo.jpeg') }}" 
+                 alt="MTCL" class="img-fluid" width="70">
 
             <!-- Brand name next to logo -->
             <a class="navbar-brand ml-2" href="#">MTCL</a>
@@ -21,7 +21,7 @@
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="#">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
                     <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
@@ -38,7 +38,7 @@
     </nav>
 
     <!-- Full Page Carousel Slider -->
-    <div id="home" class="carousel slide" data-ride="carousel">
+    <!-- <div id="home" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
             <li data-target="#home" data-slide-to="0" class="active"></li>
             <li data-target="#home" data-slide-to="1"></li>
@@ -46,12 +46,13 @@
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img class="d-block w-100 h-100" src="https://my.ispl-t10.com/images/banner-img/ILV9V8tTAqqTVj5zQoZrni128rGdmp30Bhd9vsHi.jpg" alt="First slide">
+                <img class="d-block w-100" src="{{ asset('images/slider/slider.jpeg') }}" alt="First slide">
                 <div class="carousel-caption d-none d-md-block">
-                    <h5></h5>
-                    <p></p>
+                    <h5>Mumbai Cricket Spirit</h5>
+                    <p>Celebrating the city’s passion for cricket.</p>
                 </div>
             </div>
+
             <div class="carousel-item">
                 <img class="d-block w-100 h-100" src="https://my.ispl-t10.com/images/banner-img/mj3gw0TxpFmv45r5HhM3qaTPKf0gStpzC4SuFZ9p.jpg" alt="Second slide">
                 <div class="carousel-caption d-none d-md-block">
@@ -73,7 +74,30 @@
         <a class="carousel-control-next" href="#home" role="button" data-slide="next">
             <span class="carousel-control-next-icon"></span>
         </a>
+    </div> -->
+
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="{{ asset('images/slider/slider.jpeg') }}" alt="First slide">
     </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="{{ asset('images/slider/slider.jpeg') }}" alt="Second slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="{{ asset('images/slider/slider.jpeg') }}" alt="Third slide">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
 
     <!-- Content Sections -->
     <div id="about" class="container p-4 bg-dark text-light">
@@ -217,7 +241,7 @@
         body {
             margin: 0;
             padding-bottom: 80px; /* prevent content overlap with footer */
-            background: url('https://wallpaperaccess.com/full/1088620.jpg') no-repeat center center fixed;
+            background: url('{{ asset("images/slider/back.avif") }}') no-repeat center center fixed;
             background-size: cover;
         }
 
@@ -306,5 +330,18 @@
     font-size: 18px;
     color: #f8f9fa;
 }
+
+
+.carousel-item {
+    height: 100vh;          /* full viewport height */
+    min-height: 400px;      /* fallback for small screens */
+}
+
+.carousel-item img {
+    object-fit: cover;      /* crop/scale to fill */
+    height: 100vh;          /* force full height */
+    width: 100%;            /* full width */
+}
+
     </style>
 </x-guest-layout>
